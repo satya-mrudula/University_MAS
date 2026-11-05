@@ -1,0 +1,124 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>University Database Query Report</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 35px;
+                    color: #222;
+                }
+                h1, h2 {
+                    color: #263b65;
+                }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    text-align: left;
+                }
+                th {
+                    background: #e9eef7;
+                }
+                tr:nth-child(even) {
+                    background: #f7f7f7;
+                }
+                .bar-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin: 12px 0;
+                }
+                .bar-label {
+                    width: 150px;
+                    overflow-wrap: anywhere;
+                }
+                .bar-container {
+                    background: #eee;
+                    flex: 1;
+                    height: 20px;
+                }
+                .bar {
+                    background: #5479b8;
+                    height: 20px;
+                }
+                .bar-value {
+                    width: 45px;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>University Database Query Report</h1>
+            <h2>SQL Query</h2>
+            <pre>SELECT students.name, marks.marks_obtained FROM marks JOIN students ON marks.student_id = students.student_id WHERE marks.marks_obtained &lt; ?</pre>
+            <h2>Retrieved Records</h2>
+            <p>Total records: 5</p>
+            
+                <table>
+                    <thead><tr><th>name</th><th>marks_obtained</th></tr></thead>
+                    <tbody><tr><td>Arjun</td><td>35.0</td></tr><tr><td>Rahul</td><td>28.0</td></tr><tr><td>Ananya</td><td>39.0</td></tr><tr><td>Vikram</td><td>32.0</td></tr><tr><td>Rohan</td><td>37.0</td></tr></tbody>
+                </table>
+            
+            
+                    <h2>Chart: marks_obtained</h2>
+                    
+                        <div class="bar-row">
+                            <div class="bar-label">
+                                Arjun
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar" style="width:89.74%"></div>
+                            </div>
+                            <div class="bar-value">35</div>
+                        </div>
+                    
+                        <div class="bar-row">
+                            <div class="bar-label">
+                                Rahul
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar" style="width:71.79%"></div>
+                            </div>
+                            <div class="bar-value">28</div>
+                        </div>
+                    
+                        <div class="bar-row">
+                            <div class="bar-label">
+                                Ananya
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar" style="width:100.00%"></div>
+                            </div>
+                            <div class="bar-value">39</div>
+                        </div>
+                    
+                        <div class="bar-row">
+                            <div class="bar-label">
+                                Vikram
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar" style="width:82.05%"></div>
+                            </div>
+                            <div class="bar-value">32</div>
+                        </div>
+                    
+                        <div class="bar-row">
+                            <div class="bar-label">
+                                Rohan
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar" style="width:94.87%"></div>
+                            </div>
+                            <div class="bar-value">37</div>
+                        </div>
+                    
+                
+        </body>
+        </html>
+        
